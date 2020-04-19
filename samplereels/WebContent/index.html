@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>我的寒假作业</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <script
+	src="./plug-ins/jquery/jquery-1.12.1.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./plug-ins/css/font-awesome.min.css">
+  <!-- Bootstrap -->
+	<link href="./plug-ins/css/bootstrap.css" rel="stylesheet">
+	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="./plug-ins/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./plug-ins/jquery/jquery-ui.css">
+
+<script
+	src="./plug-ins/jquery/jquery-ui.js"></script>
+<style type="text/css">
+.border {
+	border-radius: 0.5em;
+}
+</style>
+</head>
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">我的寒假作业</div>
+      </a>
+
+      <!-- Divider -->
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+    	   <h5>信息领域热词分析</h5>
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>信息领域热词</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">信息领域热词:</h6>
+            <a class="collapse-item" href="buttons.html">热词查询</a>
+            <a class="collapse-item" href="cards.html">热词引用</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          <span>信息领域热词词云</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        <h5>北京信件</h5>
+      </div>
+
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>每年信访量</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+         <i class="fa fa-pie-chart" aria-hidden="true"></i> 
+          <span>每种类型信件量</span></a>
+      </li>
+      
+       <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+          <span>各部门处理信件量</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <div class="row" style="margin-top: 3em;">
+
+            <!-- Area Chart -->
+            <div class=" col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                 	<h3>信息领域热词查询</h3>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+					<form id="defaultForm" method="post" class="form-horizontal" action="target.php" style="margin: 3em;">
+						<div class="form-group" style="margin-top: 4%;margin-left: 10%;">
+						<label class="col-md-2 control-label col-md-offset-1 " style="font-size: 18px;padding-top: 5px;font-family: serif; ">信息领域热词:</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control border search-input"
+									placeholder="请输入热词" id="userid" name="userid" onchange="finduser()"
+									 />
+							</div>
+							 <button type="button"
+									class="btn col-md-2 btn-primary border">查询</button>
+						</div>
+					</form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+		</div>
+	 </div>
+	</div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
